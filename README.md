@@ -1,6 +1,6 @@
 ## Galvanize Tower
 
-Build a full-stack application that has an API, reads and writes data, and uses a library.
+In this project, you'll build a full-stack application that has an API, reads and writes data, and uses a library. The topic is up to you!
 
 ## Requirements
 

@@ -35,6 +35,7 @@ Can take the following actions:
 * [ ] Has at least two components
 * [ ] Includes at least two end-to-end tests
 * [ ] Integrates a non-trivial library
+* [ ] Appropriately styled
 
 ### Model 1
 
