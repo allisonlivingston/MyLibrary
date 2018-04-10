@@ -6,7 +6,7 @@ In this project, you'll build a full-stack application that has an API, reads an
 
 * Has an API that can list, read, update, create, and delete data
 * Has a database backing that API that has at least 2 different tables
-* Has a front-end that uses a application framework or component library that:
+* Has a front-end that uses an application framework or component library that:
     * Consumes your API (list, read, update, create, and delete actions)
     * Uses some non-trivial (charting, mapping, payment, etc.) library
     * Has at least 2 end-to-end tests
