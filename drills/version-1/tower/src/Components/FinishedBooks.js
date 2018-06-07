@@ -2,11 +2,18 @@ import React from 'react'
 
 class FinishedBooks extends React.Component {
   render() {
-
-
-
     return(
-      <h2>Books Read</h2>
+      <div>
+        <h2>Books I've Read</h2>
+        <ul>
+          {this.props.books.map(book => {
+            return(
+              <li>{book.name}</li>
+            )
+          })}
+        </ul>
+
+      </div>
     )
   }
 }

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import FinishedBooks from './Components/FinishedBooks'
+import ToReadList from './Components/ToReadList'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 class App extends Component {
 
@@ -22,35 +25,28 @@ componentDidMount(){
 }
 
 
-handleClick = () => {
-  this.setState({
-    finished: !this.state.finished
-  })
-  console.log(this.state.finished);
-}
-
-
-
+// handleClick = () => {
+//   this.setState({
+//     finished: !this.state.finished
+//   })
+//   console.log(this.state.finished);
+// }
 
 
   render() {
     return (
-      <div className="App">
+      <div className="body">
+        <Header />
         <section>
-          <h1>Library </h1>
-          <label>Have I Read This Book Yet?</label>
-          <div>
-            {this.state.books.map(book => {
-              return(
-                <a href="">{book.name}</a>
-              )
-            })}
-          </div>
-          <input type="checkbox" onClick={this.handleClick} />
+          <h1>My Library</h1>
+          <main className="book-lists">
+            <FinishedBooks books={this.state.books}/>
+            <ToReadList />
+          </main>
         </section>
-        <FinishedBooks />
+        <Footer />
       </div>
-    );
+    )
   }
 }
 
