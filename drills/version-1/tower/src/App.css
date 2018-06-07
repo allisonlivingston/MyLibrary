@@ -25,7 +25,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-nav {
+.header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -34,7 +34,7 @@ nav {
   background-size: contain;
 }
 
-nav a {
+/* nav a {
   font-size: 3.5vw;
   font-weight: bold;
   color: white;
@@ -44,6 +44,9 @@ nav a {
     1px -1px 0 lightpink,
     -1px 1px 0 lightpink,
      1px 1px 0 lightpink;
+} */
+
+a {
   text-decoration: none;
 }
 
@@ -56,10 +59,8 @@ h1 {
   font-weight: bold;
 }
 
-main {
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
+h2 {
+  font-size: 2vw;
 }
 
 footer {
@@ -74,9 +75,34 @@ footer {
   bottom:0;
 }
 
+li {
+  list-style-type: none;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
 .book-lists {
   display: flex;
   justify-content: center;
   justify-content: space-around;
   padding-top: 2vh;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unread-books {
+  display: flex;
+  flex-direction: column;
 }
