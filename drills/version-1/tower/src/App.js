@@ -34,15 +34,17 @@ componentDidMount(){
   })
 }
 
+addBook = (book) => {
+  this.setState({
+    booksUnread: this.state.booksUnread.concat(book)
+  })
+}
 
-
-
-// handleClick = () => {
-//   this.setState({
-//     finished: !this.state.finished
-//   })
-//   console.log(this.state.finished);
-// }
+submitBook = (book) => {
+  this.setState({
+    booksRead: this.state.booksRead.concat(book)
+  })
+}
 
 
   render() {
@@ -56,7 +58,7 @@ componentDidMount(){
             <ToReadList books={this.state.booksUnread}/>
           </main>
         </section>
-        <AddBook />
+        <AddBook submitBook={this.submitBook} addBook={this.addBook}/>
         <Footer />
       </div>
     )

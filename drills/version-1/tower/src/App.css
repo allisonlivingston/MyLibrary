@@ -69,10 +69,9 @@ footer {
   align-items: center;
   height: 8vh;
   width: 100vw;
-  background-color: lightpink;
-  color: gray;
+  background-color: teal;
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
 li {
@@ -105,4 +104,9 @@ form{
 .unread-books {
   display: flex;
   flex-direction: column;
+}
+
+.recommend-selection {
+  display: flex;
+  justify-content: center;
 }

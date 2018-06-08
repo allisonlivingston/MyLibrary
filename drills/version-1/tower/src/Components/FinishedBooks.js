@@ -6,9 +6,9 @@ class FinishedBooks extends React.Component {
       <div>
         <h2>Books I've Read</h2>
         <ul>
-          {this.props.books.map(book => {
+          {this.props.books.map((book, index) => {
             return(
-              <li>{book.name}</li>
+              <li key={index}>{book.name}</li>
             )
           })}
         </ul>

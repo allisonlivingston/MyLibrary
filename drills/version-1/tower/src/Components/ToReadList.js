@@ -8,7 +8,7 @@ class ToReadList extends React.Component {
         <ul className="unread-books">
           {this.props.books.map(book => {
             return(
-              <a href="">{book.name}</a>
+              <a href="" key={book.name}>{book.name}</a>
             )
           })}
         </ul>
