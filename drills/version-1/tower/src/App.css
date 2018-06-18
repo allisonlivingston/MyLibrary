@@ -34,18 +34,6 @@ body {
   background-size: contain;
 }
 
-/* nav a {
-  font-size: 3.5vw;
-  font-weight: bold;
-  color: white;
-  text-shadow:
-    2px 2px 0 hotpink,
-   -1px -1px 0 lightpink,
-    1px -1px 0 lightpink,
-    -1px 1px 0 lightpink,
-     1px 1px 0 lightpink;
-} */
-
 a {
   text-decoration: none;
 }
@@ -71,7 +59,7 @@ footer {
   width: 100vw;
   background-color: teal;
   position: absolute;
-  bottom: 0;
+  bottom: 0pt;
 }
 
 li {
@@ -99,11 +87,11 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 5vh;
 }
 
-.unread-books {
+.books-to-read {
   display: flex;
-  flex-direction: column;
 }
 
 .recommend-selection {

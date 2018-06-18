@@ -4,7 +4,8 @@ import Header from './Components/Header'
 import FinishedBooks from './Components/FinishedBooks'
 import ToReadList from './Components/ToReadList'
 import AddBook from './Components/AddBook'
-import Footer from './Components/Footer'
+// import Footer from './Components/Footer'
+const url = 'http://localhost:3000/'
 
 class App extends Component {
 
@@ -17,35 +18,34 @@ constructor(props) {
 }
 
 componentDidMount(){
-  fetch('https://dry-meadow-55679.herokuapp.com/booksread')
+  fetch(url+'booksread')
   .then(response => response.json())
   .then(data => {
     this.setState({
-      booksRead: data
+      booksRead: data.data
     })
   })
 
-  fetch('https://dry-meadow-55679.herokuapp.com/booksunread')
+  fetch(url+'booksunread')
   .then(response => response.json())
   .then(data => {
     this.setState({
-      booksUnread: data
+      booksUnread: data.data
     })
   })
 }
 
-addBook = (book) => {
+submitUnreadBook = (booksUnread) => {
   this.setState({
-    booksUnread: this.state.booksUnread.concat(book)
-  })
+    booksUnread:booksUnread.data})
 }
 
-submitBook = (book) => {
+
+removeUnreadBook = (booksUnread) => {
   this.setState({
-    booksRead: this.state.booksRead.concat(book)
+    booksUnread:booksUnread.data
   })
 }
-
 
   render() {
     return (
@@ -54,12 +54,12 @@ submitBook = (book) => {
         <section>
           <h1>My Library</h1>
           <main className="book-lists">
-            <FinishedBooks books={this.state.booksRead}/>
-            <ToReadList books={this.state.booksUnread}/>
+            <FinishedBooks books={this.state.booksRead} />
+            <ToReadList  removeUnreadBook={this.removeUnreadBook} list={this.state.booksUnread} />
           </main>
         </section>
-        <AddBook submitBook={this.submitBook} addBook={this.addBook}/>
-        <Footer />
+        <AddBook submitUnreadBook ={this.submitUnreadBook}/>
+        {/* <Footer /> */}
       </div>
     )
   }

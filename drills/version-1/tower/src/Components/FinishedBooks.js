@@ -1,4 +1,5 @@
 import React from 'react'
+import RemoveFinishedBook from './RemoveFinishedBook'
 
 class FinishedBooks extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class FinishedBooks extends React.Component {
             )
           })}
         </ul>
-
+        <RemoveFinishedBook />
       </div>
     )
   }
