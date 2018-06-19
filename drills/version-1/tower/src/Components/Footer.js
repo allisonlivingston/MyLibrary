@@ -4,7 +4,7 @@ const Footer = () => {
   return(
     <footer>
       <small> &copy; Copyright 2018</small>
-      <p>Livingston Productions</p>
+      <p>Livingston's Library</p>
     </footer>
   )
 }

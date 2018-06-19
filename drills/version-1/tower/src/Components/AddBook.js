@@ -1,4 +1,5 @@
 import React from 'react'
+const url = 'https://dry-meadow-55679.herokuapp.com/'
 
 class AddBook extends React.Component {
 
@@ -25,7 +26,7 @@ class AddBook extends React.Component {
     this.setState({
       name: event.target.name.value
     })
-    event.target.read.value === 'true' ? fetch('http://localhost:3000/booksread', {
+    event.target.read.value === 'true' ? fetch(url+'booksread', {
       method: 'POST',
       body: JSON.stringify({
         name: this.state.name,
@@ -39,8 +40,8 @@ class AddBook extends React.Component {
       })
     })
       .then(response => response.json())
-      .then(booksRead => this.props.submitBook(booksRead))
-      .then(this.resetForm()) : fetch('http://localhost:3000/booksunread', {
+      .then(booksRead => this.props.fetchBooksRead(booksRead))
+      .then(this.resetForm()) : fetch(url+'booksunread', {
         method: 'POST',
         body: JSON.stringify({
           name: this.state.name,
@@ -51,9 +52,9 @@ class AddBook extends React.Component {
           'content-type': 'application/json'
         })
       })
-      .then(resp => resp.json())
+      .then(response => response.json())
       .then(booksUnread => {
-        this.props.submitUnreadBook(booksUnread)
+        this.props.fetchBooksUnread(booksUnread)
       })
       .then(this.resetForm())
   }
@@ -74,19 +75,19 @@ class AddBook extends React.Component {
     return(
       <div className="add-book">
         <h2>Add A Book to the List</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form className="add-book-form" onSubmit={this.handleSubmit}>
           <label name="title" value="name">Book Name</label>
-          <input type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
+          <input className="add-book-input" type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
           <label name="author" value="author">Author</label>
-          <input type="text" name="author" value={this.state.author} onChange={this.handleInputChange} />
+          <input className="add-book-input" type="text" name="author" value={this.state.author} onChange={this.handleInputChange} />
           <label name="genre" value="genre">Genre</label>
-          <input type="text" name="genre" value={this.state.genre} onChange={this.handleInputChange} />
+          <input className="add-book-input" type="text" name="genre" value={this.state.genre} onChange={this.handleInputChange} />
           <div>
             <label name="read">Have You Read This Book?</label>
             <label name="read">Yes</label>
-            <input type="radio" name="read" value="true" onClick={this.toggleFields}/>
+            <input className="add-book-input" type="radio" name="read" value="true" onClick={this.toggleFields}/>
             <label name="unread">No</label>
-            <input type="radio" name="read" value="false" onClick={this.toggleFields}/>
+            <input className="add-book-input" type="radio" name="read" value="false" onClick={this.toggleFields}/>
           </div>
           {showFields && <div className="if-read">
             <section>
@@ -101,7 +102,7 @@ class AddBook extends React.Component {
               <input type="radio" name="enjoyed" value="false" onChange={this.handleInputChange} />
             </section>
           </div>}
-          <input type="submit" name="submit" value="Add Book"/>
+          <button className="add-book-button" type="submit" name="submit" value="Add Book">Add Book</button>
         </form>
       </div>
     )

@@ -43,12 +43,20 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 10vh;
-  font-size: 3vw;
+  font-size: 3.5vw;
   font-weight: bold;
+  text-decoration: underline #25A994;
 }
 
 h2 {
-  font-size: 2vw;
+  font-size: 2.2vw;
+  font-weight: bold;
+  text-decoration: underline #25A994;
+  margin-bottom: 1vh;
+}
+
+p {
+  font-size: 1.7vw;
 }
 
 footer {
@@ -56,10 +64,8 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 8vh;
-  width: 100vw;
-  background-color: teal;
-  position: absolute;
-  bottom: 0pt;
+  background-color: #25A994;
+  font-size: 1.3vw;
 }
 
 li {
@@ -71,6 +77,22 @@ form{
   flex-direction: column;
 }
 
+button {
+  background-color: #25A994;
+  color: #EEEEEE;
+  border: none;
+  height: 5vh;
+  width: 12vw;
+  border-radius: 1.5vh;
+  font-size: 1.2vw;
+}
+
+button:hover {
+  background-color: #EEEEEE;
+  color: #25A994;
+  font-weight: bold;
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -79,8 +101,28 @@ form{
 .book-lists {
   display: flex;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 2vh;
+}
+
+.books-to-read-sec {
+  border-left: solid thin #25A994;
+  border-right: solid thin #25A994;
+  padding: 3vh 2vw;
+}
+
+.book-list-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45vw;
+  margin-bottom: 4vh;
+}
+
+.add-book-form {
+  padding: 4vh 4vw;
+  margin-top: 2vh;
+  border: solid thin #25A994;
 }
 
 .add-book {
@@ -90,11 +132,36 @@ form{
   padding-bottom: 5vh;
 }
 
-.books-to-read {
+.books-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.books-list-name {
   display: flex;
 }
 
 .recommend-selection {
   display: flex;
   justify-content: center;
+}
+
+.book-update-fields {
+  display: flex;
+  flex-direction: column;
+  padding: 4vh 4vw;
+  border: solid thin #25A994;
+}
+
+.add-book-button {
+  width: 12vw;
+  height: 3.8vh;
+  font-size: 1.6vw;
+}
+
+.edit-book-buttons-section {
+  width: 26vw;
+  margin-top: 1vh;
+  display: flex;
+  justify-content: space-around;
 }
