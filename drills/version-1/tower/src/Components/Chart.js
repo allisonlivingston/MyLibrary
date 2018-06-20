@@ -1,62 +1,28 @@
-import React from 'react'
+import React, { Component } from 'react';
+import { VictoryBar, VictoryContainer, VictoryChart} from 'victory';
 
-class Chart extends React.Component {
-  render(){
-    return(
-      <section className="chart-section">
-        <canvas id="myChart" width="400" height="400"></canvas>
-        <script>
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var myChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ["2014", "2015", "2016"],
-            datasets: [{
-              data: [73, 199, 395],
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
-            }]
-          },
-          options: {
-            legend: {
-              display: false
-            },
-            scales: {
-              yAxes: [{
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Number of Graduates'
-                },
-                ticks: {
-                  beginAtZero:true
-                }
-              }],
-              xAxes: [{
-                scaleLabel: {
-                  display: true,
-                  labelString: 'Year of Graduation'
-                }
-              }]
-            }
-          }
-        })
-        </script>
-      </section>
+class Chart extends Component {
+  render() {
+    return (
+      <div className="book-chart">
+        <h2>Book Totals</h2>
+        <VictoryChart
+          domainPadding={100}
+        >
+          <VictoryBar
+            animate={{
+              duration: 2000,
+              onLoad: { duration: 1000 }
+            }}
+            style={{ data: { fill: "#25A994" } }}
+            categories={{ x: ["Books Read", "Books Unread"] }}
+            data={[{x: 1, y: this.props.booksRead.length}, {x: 2, y: this.props.booksUnread.length}]}
+            domain={{ x: [0, 2] }}
+            barRatio={0.5}
+          />
+        </VictoryChart>
+      </div>
+
     )
   }
 }

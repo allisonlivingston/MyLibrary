@@ -4,6 +4,7 @@ import Header from './Components/Header'
 import FinishedBooks from './Components/FinishedBooks'
 import ToReadList from './Components/ToReadList'
 import AddBook from './Components/AddBook'
+import Chart from './Components/Chart'
 import Footer from './Components/Footer'
 const url = 'https://dry-meadow-55679.herokuapp.com/'
 
@@ -58,7 +59,10 @@ fetchBooksRead = (booksRead) => {
             <ToReadList list={this.state.booksUnread} fetchBooksUnread={this.fetchBooksUnread}/>
           </main>
         </section>
-        <AddBook fetchBooksUnread ={this.fetchBooksUnread} fetchBooksRead={this.fetchBooksRead}/>
+        <section className="bottom-section">
+          <AddBook fetchBooksUnread ={this.fetchBooksUnread} fetchBooksRead={this.fetchBooksRead}/>
+          <Chart booksRead={this.state.booksRead} booksUnread={this.state.booksUnread}/>
+        </section>
         <Footer />
       </div>
     )
