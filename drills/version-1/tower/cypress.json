@@ -1,0 +1,5 @@
+/* {
+  "baseUrl": "site url you are testing",
+  "integrationTests": "tests",
+  "videoRecording": false
+} */
