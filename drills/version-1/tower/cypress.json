@@ -1,5 +1,5 @@
-/* {
-  "baseUrl": "site url you are testing",
-  "integrationTests": "tests",
-  "videoRecording": false
-} */
+{
+  "baseUrl": "http://localhost:3000/",
+  "integrationFolder": "cypress/integration",
+  "video": false
+}

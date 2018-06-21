@@ -1,0 +1,22 @@
+describe('Library Tracker Website', () => {
+  it('Tests for rendered elements on page', () => {
+    cy.visit('/')
+    cy.get('h1').contains('My Library')
+    cy.get('h2').should('contain', 'Books I\'ve Read').should('contain', 'Books I Want to Read').should('contain', 'Add A Book to the List').should('contain', 'Book Totals')
+    cy.get('tspan').should('contain', 'Books Read').should('contain', 'Books Unread')
+  })
+  it('Tests for functionality on page', () => {
+    cy.get('button').contains('Remove A Book').click()
+    cy.should('contain', 'Cancel')
+    cy.get('.books-to-read-sec').children().first()
+    cy.get('#1').click()
+    cy.get('.book-update-fields').find('input[name="selectedBookTitle"]')
+    cy.get('.book-update-fields').find('input[name="selectedBookAuthor"]')
+    cy.get('.book-update-fields').find('input[name="selectedBookGenre"]')
+    cy.get('div').find('input[value="false"]').click()
+    cy.get('.add-book-form').children().should('have.length', 8)
+    cy.get('div').find(' input[value="true"]').click()
+    cy.get('.add-book-form').children().should('have.length', 9)
+    cy.get('label').should('contain', 'Number of Times Read', 'Would You Recommend This Book?')
+  })
+})
