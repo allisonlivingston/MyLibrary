@@ -19,15 +19,12 @@ constructor(props) {
 }
 
 componentDidMount(){
-  fetch(url+'booksread')
-  .then(response => response.json())
-  .then(data => {
-    this.setState({
-      booksRead: data.data
-    })
-  })
+  this.fetchBooksRead()
+  this.fetchBooksUnread()
+}
 
-  fetch(url+'booksunread')
+fetchBooksUnread = () => {
+  return fetch(url+'booksunread')
   .then(response => response.json())
   .then(data => {
     this.setState({
@@ -36,15 +33,13 @@ componentDidMount(){
   })
 }
 
-fetchBooksUnread = (booksUnread) => {
-  this.setState({
-    booksUnread: booksUnread.data
-  })
-}
-
-fetchBooksRead = (booksRead) => {
-  this.setState({
-    booksRead: booksRead.data
+fetchBooksRead = () => {
+  return fetch(url+'booksread')
+  .then(response => response.json())
+  .then(data => {
+    this.setState({
+      booksRead: data.data
+    })
   })
 }
 

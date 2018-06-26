@@ -70,8 +70,8 @@ class ToReadList extends React.Component {
       body: JSON.stringify(postData),
     })
     .then(response => response.json())
-    .then(booksUnread => {
-      this.props.fetchBooksUnread(booksUnread)
+    .then(() => {
+      this.props.fetchBooksUnread()
     })
     .then(this.resetForm())
   }
@@ -109,7 +109,7 @@ class ToReadList extends React.Component {
       mode: 'CORS'
     })
     .then(response => response.json())
-    .then(booksUnread => this.props.fetchBooksUnread(booksUnread))
+    .then(() => this.props.fetchBooksUnread())
     .then(this.resetForm())
   }
 
