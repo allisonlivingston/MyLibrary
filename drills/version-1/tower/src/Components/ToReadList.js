@@ -105,8 +105,7 @@ class ToReadList extends React.Component {
     event.preventDefault()
     let deletedURL = `https://dry-meadow-55679.herokuapp.com/booksunread/${this.state.selectedBookId}`
     fetch(deletedURL, {
-      method: 'DELETE',
-      mode: 'CORS'
+      method: 'DELETE'
     })
     .then(response => response.json())
     .then(() => this.props.fetchBooksUnread())
