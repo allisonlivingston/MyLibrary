@@ -108,7 +108,7 @@ class ToReadList extends React.Component {
       method: 'DELETE'
     })
     .then(response => response.json())
-    .then(() => this.props.fetchBooksUnread())
+    .then(booksUnread => this.props.fetchBooksUnread())
     .then(this.resetForm())
   }
 
