@@ -1,14 +1,25 @@
-## Galvanize Tower
+## My Library
 
-In this project, you'll build a full-stack application that has an API, reads and writes data, and uses a library. The topic is up to you!
+![MyLibrary](./MyLibrary-Screenshot.png)
 
-## Requirements
+This is a React application used for storing and adding books that you have read and books that you want to read. A graph auto populates the total number of books read and unread.
 
-* Has an API that can list, read, update, create, and delete data
-* Has a database backing that API that has at least 2 different tables
-* Has a front-end that uses an application framework or component library that:
-    * Consumes your API (list, read, update, create, and delete actions)
-    * Uses some non-trivial (charting, mapping, payment, etc.) library
-    * Has at least 2 end-to-end tests
+## How to Use
 
-Add a link to your [deployed front-end URL](https://my-library-tracker.firebaseapp.com/), your [deployed API URL](https://dry-meadow-55679.herokuapp.com/booksread), your [other deployed API URL]( https://dry-meadow-55679.herokuapp.com/booksunread), and any [code repos you used](https://github.com/FormidableLabs/victory).
+* Click on the front-end URL below to view the current list of books read, the list of books unread, the number of books read and unread plotted on a graph, and a form for adding books.
+* To edit an existing book, click "Edit A Book", select which book you would like to edit, make changes to the desired fields, and click "Update Book".
+* To remove an existing book, click "Remove A Book", select which book you would like to remove, and click "Remove The Selected Book".
+* To add a book, fill out the form under "Add A Book to the List", and select whether you have read the book. If you have read the book, the form will prompt you to fill in additional information. When the form is complete, click "Add Book" and the book will be added to the end of the selected list.
+
+## Links
+ <br />
+[Deployed front-end URL](https://my-library-tracker.firebaseapp.com/) <br />
+[Deployed API URL for books read](https://dry-meadow-55679.herokuapp.com/booksread) <br />
+[Deployed API URL for books unread]( https://dry-meadow-55679.herokuapp.com/booksunread) <br />
+[Code repo for graph](https://github.com/FormidableLabs/victory).
+
+## Author
+
+Allison Livingston <br />
+Email: allisonlivingston16@gmail.com <br />
+LinkedIn: https://www.linkedin.com/in/allisonlivingston16/
