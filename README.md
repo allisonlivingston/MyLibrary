@@ -12,7 +12,6 @@ This is a React application used for storing and adding books that you have read
 * To add a book, fill out the form under "Add A Book to the List", and select whether you have read the book. If you have read the book, the form will prompt you to fill in additional information. When the form is complete, click "Add Book" and the book will be added to the end of the selected list.
 
 ## Links
- <br />
 [Deployed front-end URL](https://my-library-tracker.firebaseapp.com/) <br />
 [Deployed API URL for books read](https://dry-meadow-55679.herokuapp.com/booksread) <br />
 [Deployed API URL for books unread]( https://dry-meadow-55679.herokuapp.com/booksunread) <br />
