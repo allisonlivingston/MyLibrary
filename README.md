@@ -17,6 +17,9 @@ This is a React application used for storing and adding books that you have read
 [Deployed API URL for books unread]( https://dry-meadow-55679.herokuapp.com/booksunread) <br />
 [Code repo for graph](https://github.com/FormidableLabs/victory).
 
+## Technologies
+React.js, HTML, CSS, Express, Knex, PostgreSQL, Firebase, Heroku
+
 ## Author
 
 Allison Livingston <br />
